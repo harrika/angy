@@ -1,0 +1,15 @@
+
+<div class="search">
+<h4>student directory</h4>
+<label>Search: </label>
+<input ng-model="ss" placeholder="enter student regn" autofocus>
+</div>
+
+  <ul>
+  <li ng-repeat="item in students | filter:ss | limitTo: 2">
+  <a href="#/details/{{students.indexOf(item)}}">
+  <b>{{item.name}}</b>
+  <br>{{item.company | uppercase}}<hr>
+  </a>
+  </li>
+  </ul>
